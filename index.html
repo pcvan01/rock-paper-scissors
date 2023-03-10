@@ -5,67 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="js-file.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <script>
-        // Create a function that randomly select rock, paper, or scissors for the computer's choice
-        function getComputerChoice() {
-            let itemSelection = ["rock", "paper", "scissors"];
-            let randomItemSelector = Math.floor(Math.random() * 3);
-            return itemSelection[randomItemSelector];
-        }
-
-        // Define the playRound function that compared the payer's and computer's choice to determine who won
-        function playRound(playerSelection, computerSelection) {
-            playerSelection = playerSelection.toLocaleLowerCase();
-            let winPairs = {"rock": "scissors", "scissors": "paper", "paper": "rock"};
-            if (playerSelection == computerSelection) {
-                return("draw");
-            } else if (winPairs[playerSelection] == computerSelection) {
-                return("win");
-            } else {
-                return("lost");
-            }
-        }
-        
-        // Simulate a game
-        // Define variables
-        let playerSelection = NaN;
-        let computerSelection = NaN;
-        let roundCount = 0;
-        let playerScore = 0;
-        let computerScore = 0;
-        let gameResult = NaN;
-        function game(){
-            for (let i = 0; i < 5; i++) {
-                playerSelection = prompt("What's your select?").toLowerCase();
-                computerSelection = getComputerChoice();
-                roundCount = i + 1;
-                console.log("Round " + roundCount + " of 5");
-                console.log("You selected " + playerSelection);
-                console.log("The computer selected " + computerSelection);
-                gameResult = playRound(playerSelection, computerSelection);
-                if (gameResult == "draw"){
-                    console.log("It's a draw!");
-                } else if (gameResult == "win") {
-                    console.log("You won!")
-                    playerScore = playerScore + 1;
-                } else {
-                    console.log("You lost :(")
-                    computerScore = computerScore + 1;
-                }
-                console.log("Your score: " + playerScore + "; Computer score: " + computerScore);
-                console.log("");
-
-                if (i == 4){
-                    console.log("This game is over!");
-                }
-            }
-        }
-
-        // Play the game
-        game()
-
-    </script>
+    <div class="title">Rock-Paper-Scissors</div>
+    <div id="result">Welcome!</div>
+    <div class="game-score">
+        <div class="game-score-report" id="player-score">Player: 0</div>
+        <div class="game-score-report" id="computer-score">Computer: 0</div>
+    </div>
+    <div class="selection">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <div class="report-selection">
+        <div class="report">
+            <div>You chose:</div>
+            <div id="user-selection">-</div>
+        </div>
+        <div class="report">
+            <div>Computer chose:</div>
+            <div id="comp-selection">-</div>
+        </div>
+    </div>
 </body>
 </html>

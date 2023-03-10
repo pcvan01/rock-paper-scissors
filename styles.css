@@ -1,0 +1,105 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin-left:20px;
+    min-width:100px;
+    max-width:700px; 
+    padding:0px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: grey;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 1.2rem;
+    padding: 0.4rem;
+}
+
+#result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 1rem;
+    padding: 0.4rem;
+}
+
+.game-score {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    margin: 0.5rem;
+    padding: 0.4rem;
+}
+
+.game-score-report {
+    font-size: 1.1rem;
+    display: flex;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 1.2rem;
+    padding: 0.4rem;
+}
+
+.selection {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    
+}
+
+button {
+    background-color: darkblue;
+    font-size: 1.8rem;
+    color: white;
+    display: flex;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 0.4rem;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: blue;
+    opacity: 1;
+    transition: 0s
+}
+
+button:active {
+    padding: 0.3rem;
+    margin: 0.4rem;
+    transition: 0s
+}
+
+.report-selection {
+    font-size: 1rem;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 5rem;
+}
+
+.report {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    margin: 0.5rem;
+}
+
